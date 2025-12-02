@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Jumper</title>
+
+    <!-- Normalización de estilos -->
+    <link rel="preload" href="css/normalize.css" as="style" />
+    <link href="css/normalize.css" rel="stylesheet" />
+
+    <!-- Estilos principales -->
+    <link rel="preload" href="css/styles.css" as="style" />
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- =======================
+         ENCABEZADO PRINCIPAL 
+         ======================= -->
+    <header>
+      <!-- Logo del sitio -->
+      <div class="logo-contenedor">
+        <img
+          src="imagenes/Logo_Jumper.png"
+          alt="Logo Web Jumper"
+          class="logo-header"
+        />
+      </div>
+      <h1 class="titulo">WEB JUMPER</h1>
+    </header>
+    <p class="versiculo">
+      "No permitas que nadie te subestime por ser joven. Sé un ejemplo para
+      todos los creyentes en lo que dices, en la forma en que vives, en tu amor,
+      tu fe y tu pureza." <br />
+      <span class="versiculo-ref">1 Timoteo 4:12</span>
+    </p>
+    <!-- =======================
+         NAVEGACIÓN PRINCIPAL
+         ======================= -->
+    <div class="nav-bg">
+      <nav class="navegacion-principal contenedor">
+        <a href="index.html">Inicio</a>
+        <a href="Galeriaimagenes.html">Galería</a>
+        <a href="Blogjumper.html">Blog</a>
+        <a href="jumpsocial.html">Social</a>
+      </nav>
+    </div>
+
+    <!-- =======================
+         SECCIÓN HERO (PORTADA)
+         ======================= -->
+    <section class="hero">
+      <div class="contenido-hero">
+        <h2>Jóvenes Unidos y Marcados Para Exaltar al Rey</h2>
+        <p>Nos une una misma pasión y un mismo sentir, Jesús.</p>
+      </div>
+    </section>
+
+    <!-- =======================
+         CONTENIDO PRINCIPAL
+         ======================= -->
+    <main class="contenedor">
+      <!-- Misión -->
+      <section id="mision" class="contenido-seccion">
+        <h3>Misión</h3>
+        <p>
+          Guiar a los adolescentes a vivir y compartir el mensaje de Jesús con
+          pasión y propósito, formándolos como discípulos firmes en su fe.
+          Buscamos acompañarlos en su crecimiento espiritual, enseñándoles a
+          obedecer la Palabra, fortalecer su relación con Dios y reflejar a
+          Cristo en su familia, escuela y comunidad, cumpliendo así el mandato
+          de ir y hacer discípulos.
+        </p>
+      </section>
+
+      <!-- Visión -->
+      <section id="vision" class="contenido-seccion">
+        <h3>Visión</h3>
+        <p>
+          Ser un grupo de adolescentes comprometidos con Jesús, reconocido por
+          su amor, unidad y servicio. Queremos impactar nuestra generación
+          llevando el mensaje de salvación, formando nuevos discípulos y creando
+          un ambiente donde cada joven descubra su llamado, crezca en carácter
+          cristiano y sea un ejemplo vivo del Reino de Dios en todo lugar.
+        </p>
+      </section>
+    </main>
+
+    <!-- =======================
+         FORMULARIO DE CONTACTO
+         ======================= -->
+    <section class="form-contacto">
+      <form class="formulario" id="formContacto">
+        <fieldset>
+          <legend>Te contactamos:</legend>
+
+          <div class="campo">
+            <label>Nombres:</label>
+            <input type="text" id="nombre" name="Nombre y apellido" />
+            <!--<span class="error" id="error-nombre"></span>-->
+            <p class="error"></p>
+          </div>
+
+          <div class="campo">
+            <label>Teléfono:</label>
+            <input type="tel" id="telefono" name="099111000" />
+            <!-- <span class="error" id="error-telefono"></span>-->
+            <p class="error"></p>
+          </div>
+
+          <div class="campo">
+            <label>Mensaje:</label>
+            <textarea id="mensaje" name="Escribe tu mensaje"></textarea>
+            <!--<span class="error" id="error-mensaje"></span>-->
+            <p class="error"></p>
+          </div>
+
+          <div class="campo centrar-boton">
+            <input type="submit" value="Enviar" />
+          </div>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- =======================
+         FOOTER
+         ======================= -->
+    <footer class="footer">
+      <div class="footer-social">
+        <!-- WhatsApp -->
+        <a
+          href="https://chat.whatsapp.com/ESUN8RbwaGWGCxMpLiizRX"
+          target="_blank"
+          class="social-btn"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+          />
+          <span>Comunidad WhatsApp</span>
+        </a>
+
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/jumper.ec?igsh=MTBocXJtMDJzdWd0OA=="
+          target="_blank"
+          class="social-btn"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+            alt="Instagram"
+          />
+          <span>Instagram</span>
+        </a>
+
+        <!-- Facebook -->
+        <a
+          href="https://www.facebook.com/share/17VPagKwo7/"
+          target="_blank"
+          class="social-btn"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+            alt="Facebook"
+          />
+          <span>Facebook</span>
+        </a>
+      </div>
+
+      <!-- Dirección -->
+      <div class="footer-direccion">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p>Av. Isidro Ayora y Jose Luis Tamayo Esq.</p>
+        <p>Iglesia Jesucristo es la Roca (JER)</p>
+        <p>Junto a Corp. Fernández.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/validacion.js"></script>
+  </body>
+</html>

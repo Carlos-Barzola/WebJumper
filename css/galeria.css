@@ -1,0 +1,191 @@
+
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #fcfcfc;
+    --secundario: rgb(255, 147, 7);
+    --gris: #757575; 
+    }
+/* ========================= GENERALES ========================= */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0d0d0d;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========================= HEADER ========================= */
+
+/* Título principal */
+.titulo-galeria {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 3rem;
+  color: #ffa40c;
+  margin-bottom: 3rem;
+}
+
+/* Contenedor del logo debajo del título */
+.logo-galeria {
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 70px;
+}
+
+/* Imagen del logo */
+.logo-galeria img {
+  width: 300px;
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(255, 147, 7, 0.45));
+  transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar mouse */
+.logo-galeria img:hover {
+  transform: scale(2);
+}
+
+/* =====================================
+   NAVEGACIÓN PRINCIPAL
+   ===================================== */
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px){
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a{
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 0.8rem;
+    font-weight: bold;
+}
+
+.navegacion-principal a:hover{
+    color: var(--oscuro);
+}
+/* ========================= SECCIONES DE GALERÍA ========================= */
+
+.galeria-section {
+  width: 90%;
+  margin: 40px auto;
+}
+
+.galeria-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  border-left: 5px solid #ffa40c;
+  padding-left: 10px;
+
+  /* Un toque más premium */
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* ========================= CARRUSELES ========================= */
+
+/* Contenedor principal */
+.carousel {
+  overflow: hidden; /* SIN SCROLL visible */
+  width: 100%;
+  padding: 10px 0;
+
+  /* Se ve más elegante con espacio arriba/abajo */
+  margin-top: 10px;
+}
+
+/* Wrapper interno */
+.carousel-wrapper {
+  display: flex;
+  gap: 40px; /* <<< más respiración premium */
+  width: max-content;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Estilos de imagen */
+.carousel-wrapper img {
+  width: 380px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 22px;
+
+  /* Sombras suaves premium */
+  box-shadow:
+    0 8px 20px rgba(255, 153, 0, 0.25),
+    0 4px 10px rgba(0, 0, 0, 0.4);
+
+  background: #131313; /* “Photo frame” look */
+
+  /* transición elegante */
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Hover más elegante */
+.carousel-wrapper img:hover {
+  transform: scale(1.06);
+  box-shadow:
+    0 12px 28px rgba(255, 166, 0, 0.35),
+    0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* =====================================
+   FOOTER
+   ===================================== */
+.footer{
+    margin-top: 4rem;
+    padding: 3rem 0;
+    background-color: #111;
+}
+
+.footer-social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    font-weight: bold;
+}
+
+.social-btn{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.social-btn img{
+    width: 3rem;
+    height: 3rem;
+    transition: transform .3s ease;
+}
+
+.social-btn:hover img{
+    transform: scale(1.2);
+}
+
+.footer-direccion{
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.footer-direccion p{
+    color: var(--blanco);
+    margin: .3rem 0;
+    text-align: center;
+}
+
