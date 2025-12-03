@@ -3,7 +3,7 @@
     --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #fcfcfc;
-    --secundario: rgb(255, 147, 7);
+    --secundario: #ffa40c;
     --gris: #757575; 
     }
 /* ========================= GENERALES ========================= */
@@ -38,7 +38,7 @@ body {
 .logo-galeria img {
   width: 300px;
   height: auto;
-  filter: drop-shadow(0 4px 10px rgba(255, 147, 7, 0.45));
+  filter: drop-shadow(0 4px 10px rgba(255, 147, 7, 0.918));
   transition: transform 0.3s ease;
 }
 

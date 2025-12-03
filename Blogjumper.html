@@ -1,11 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Jumper</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog - Web Jumper</title>
+
+  <!-- Reusa fuentes y paleta -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/blog.css" />
 </head>
 <body>
+  
+<!-- Barra de navegación -->
+ <div class="nav-blg">
+    <nav class="nav-princblog contenedor">
+      <a href="index.html">Inicio</a>
+      <a href="Galeriaimagenes.html">Galería</a>
+      <a href="Blogjumper.html">Blog</a>
+      <a href="jumpsocial.html">Social</a>
+    </nav>
+    </div>
+
+  <!-- HEADER (mantén estilo similar al resto del sitio) -->
+  <header class="blog-header">
+    <div class="logo-contenedor-small">
+      <h1>Jumper - Blogs</h1>
+      <img src="imagenes/Roary_Blog.png" alt="Logo" />
+    </div>
+    <p class="lead">Temas y reflexiones para adolescentes cristianos.</p>
+  </header>
     
+  <main class="blog-main">
+
+    <!-- Zona pública: listado de posts -->
+    <section id="posts-container" class="posts-container">
+      <!-- Aquí se inyectan <article> de los posts -->
+    </section>
+
+    <!-- SIDEBAR: login/registro + botón admin -->
+    
+    <aside class="sidebar">
+
+      <!-- Registro / Login -->
+      <div class="card auth-card">
+        <h3>Registrarme</h3>
+
+        <div id="user-info" class="user-info">
+          <!-- Si hay usuario logueado se muestra aquí -->
+        </div>
+
+        <div id="auth-forms" class="auth-forms">
+          <input type="text" id="reg-username" placeholder="Usuario (para comentar)" />
+          <input type="password" id="reg-password" placeholder="Contraseña" />
+          <button id="btn-register">Registrarme</button>
+
+          <hr/>
+          <h3>Ya tengo cuenta</h3>
+          <input type="text" id="login-username" placeholder="Usuario" />
+          <input type="password" id="login-password" placeholder="Contraseña" />
+          <button id="btn-login">Iniciar sesión</button>
+        </div>
+
+        <div class="small-note">
+          <p>Debes iniciar sesión para comentar. Tus datos se guardan localmente en este navegador.</p>
+        </div>
+      </div>
+
+      <!-- ADMIN: crear post -->
+      <div class="card admin-card">
+        <h3>Área Administrador</h3>
+        <p class="muted">(Acceso con contraseña de administrador)</p>
+
+        <input type="password" id="admin-pass" placeholder="Clave admin" />
+        <button id="btn-admin-login">Entrar como admin</button>
+
+        <div id="admin-panel" class="admin-panel hidden">
+          <hr/>
+          <input type="text" id="post-title" placeholder="Título del post" />
+          <input type="text" id="post-banner-url" placeholder="URL de imagen (o deja vacío y pega local DataURL)" />
+          <textarea id="post-body" placeholder="Escribe el contenido..."></textarea>
+          <button id="btn-create-post">Publicar</button>
+          <button id="btn-logout-admin" class="danger">Salir admin</button>
+        </div>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- Plantilla modal simple para comentarios -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="js/blog.js"></script>
 </body>
 </html>

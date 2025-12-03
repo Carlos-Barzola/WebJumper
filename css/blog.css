@@ -1,0 +1,195 @@
+/* blog.css - estilo coherente con Web Jumper */
+:root{
+  --bg: #0d0d0d;
+  --card: #212121;
+  --accent: #ffa40c;
+  --muted: #bdbdbd;
+  --white: #ffffff;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, rgba(0,0,0,.95), var(--bg));
+  color:var(--white);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* HEADER */
+.blog-header{
+  text-align:center;
+  padding:28px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.blog-header .logo-contenedor-small img{
+  width:300px; 
+  height:auto; 
+  display:block;
+  margin:0 auto 8px;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  filter: drop-shadow(0 4px 10px rgba(255, 147, 7, 0.45)); transition: transform 0.3s ease;
+}
+
+.logo-contenedor-small img:hover {
+    transform: scale(2);
+}
+.blog-header h1{ 
+    font-size:2.6rem;
+    margin:0; 
+    color:var(--accent);
+}
+
+.blog-header .lead{ 
+    color:var(--muted); 
+    margin:6px 0 16px;
+}
+
+/*NAVEGACIÓN PRINCIPAL*/
+.nav-blg{
+  background-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.nav-princblog{
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .nav-princblog {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.nav-princblog a{
+  display: block;
+  text-align: center;
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.8rem;
+  font-weight: bold;
+}
+
+.nav-princblog a:hover{
+  color: var(--card)
+}
+/* layout */
+.blog-main{
+  display:grid;
+  grid-template-columns: 1fr 320px;
+  gap:32px;
+  width:90%;
+  max-width:1200px;
+  margin:36px auto;
+  align-items:start;
+}
+
+/* posts column */
+.posts-container{
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+}
+
+/* single post */
+.post{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.post:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 20px 54px rgba(0,0,0,0.7);
+}
+.post .banner{
+  width:100%;
+  height: 260px;
+  object-fit: cover;
+  display:block;
+  filter: saturate(.95) contrast(1.03);
+}
+.post .content{
+  padding:20px 24px;
+}
+.post h2{
+  margin:0 0 8px;
+  font-size:1.9rem;
+  color:var(--accent);
+}
+.post .meta{
+  font-size:1.2rem;
+  color:var(--muted);
+  margin-bottom:12px;
+}
+.post p{ color: #e6e6e6; line-height:1.6; margin:0 0 14px; }
+
+/* comments */
+.comments{
+  margin-top:12px;
+  border-top:1px dashed rgba(255,255,255,0.04);
+  padding-top:12px;
+}
+.comment{
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,0.02);
+}
+.comment .who{ font-weight:700; color:var(--accent);}
+.comment .when{ color:var(--muted); font-size:1.1rem; margin-left:8px;}
+
+/* sidebar cards */
+.card{
+  background:var(--card);
+  padding:16px;
+  border-radius:10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+.auth-card input,
+.admin-card input,
+.admin-panel input,
+.admin-panel textarea,
+#post-body{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.04);
+  background:transparent;
+  color:var(--white);
+}
+.auth-card .small-note{ font-size:1.1rem; color:var(--muted); margin-top:8px;}
+button{
+  background:var(--accent);
+  color:var(--bg);
+  border:none;
+  padding:10px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:700;
+}
+button.danger{ background:#d33; color:#fff; }
+.hidden{ display:none; }
+
+/* toast */
+.toast{
+  position:fixed; right:20px; bottom:20px;
+  background: #111; color:var(--white);
+  padding:12px 16px; border-radius:8px; box-shadow:0 6px 20px rgba(0,0,0,0.6);
+  opacity:.98;
+}
+.toast.hidden{ display:none; }
+
+.admin-card{ margin-top:40px; }
+
+/* responsive */
+@media(max-width:980px){
+  .blog-main{ grid-template-columns: 1fr; padding:0 18px; }
+  .blog-nav{ display:none; }
+  .logo-contenedor-small img{ width:64px;}
+  .post .banner{ height: 200px; }
+}

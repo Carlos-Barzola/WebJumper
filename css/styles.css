@@ -5,7 +5,7 @@
     --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #fcfcfc;
-    --secundario: rgb(255, 147, 7);
+    --secundario: #ffa40c;
     --gris: #757575; 
 }
 
@@ -37,10 +37,14 @@ body{
 }
 
 .logo-contenedor img {
-    width: 400px;   /* Puedes ajustar el tamaño */
+    width: 300px;   /* Puedes ajustar el tamaño */
     height: auto;
+    filter: drop-shadow(0 4px 10px #ffa40c(255, 147, 7, 0.45));
+    transition: transform 0.3s ease;
     display: block;
 }
+
+
 /* =====================================
    TITULO PRINCIPAL
    ===================================== */
@@ -72,7 +76,8 @@ body{
 
 .versiculo:hover {
     color: var(--secundario);  /* Cambia a tu color secundario (naranja) */
-    text-shadow: 0px 0px 6px rgba(255, 147, 7, 0.5); /* Brillo suave */
+    text-shadow: 0px 0px 6px rgba(247, 141, 4, 0.918); /* Brillo suave */
+    transform: scale(1.2);
 }
 
 .versiculo-ref {
