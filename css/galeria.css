@@ -189,3 +189,92 @@ body {
     text-align: center;
 }
 
+@media (max-width: 768px) {
+
+  .titulo-galeria {
+    font-size: 2.3rem;
+    padding: 20px 0;
+    margin-bottom: 2rem;
+  }
+
+  .logo-galeria img {
+    width: 200px;
+  }
+
+  .navegacion-principal {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navegacion-principal a {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .galeria-section h2 {
+    font-size: 1.8rem;
+    border-left-width: 4px;
+  }
+
+  .carousel-wrapper {
+    gap: 20px;
+  }
+
+  .carousel-wrapper img {
+    width: 250px;
+    height: 180px;
+    border-radius: 16px;
+  }
+
+  .footer-social {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .footer-direccion p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .titulo-galeria {
+    font-size: 1.9rem;
+  }
+  .logo-galeria img {
+    width: 160px;
+  }
+  .navegacion-principal a {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  .carousel-wrapper img {
+    width: 200px;
+    height: 150px;
+  }
+  .galeria-section h2 {
+    font-size: 1.6rem;
+  }
+  .social-btn img {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  .social-btn {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .carousel-wrapper img {
+    width: 420px;
+    height: 300px;
+  }
+  .galeria-section h2 {
+    font-size: 2.6rem;
+  }
+  .titulo-galeria {
+    font-size: 3.4rem;
+  }
+}

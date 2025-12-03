@@ -1,0 +1,156 @@
+.titulo-bloger{
+    text-align: center;
+}
+.blog-card {
+    background: #1a1a1a;
+    border-radius: 18px;
+    padding: 2.5rem;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 900px;
+    line-height: 1.8;
+    color: var(--blanco);
+}
+
+
+.navegacion-bloger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; 
+    background:#1a1a1a;
+    border-radius: 18px;
+    max-width: 600px;
+    margin: auto;
+}
+
+@media (min-width: 768px){
+    .navegacion-bloger{
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+    }
+}
+
+.navegacion-bloger a{
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.navegacion-bloger a:hover{
+    color: var(--oscuro);
+
+}
+.navegacion-bloger a.activo {
+    color: var(--oscuro);
+    background-color: var(--secundario);
+    border-radius: 8px;
+    padding: 0.8rem 1.2rem;
+}
+
+.blog-card-comentarios {
+    background: var(--secundario);
+    border-radius: 18px;
+    padding: 2.5rem;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 900px;
+    line-height: 1.8;
+    color: var(--oscuro);
+}
+
+.comentario-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.comentario-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    resize: vertical;
+    min-height: 120px;
+    border: 1px solid #ccc;
+}
+
+.btn-enviar {
+    align-self: center;
+    padding: 0.7rem 2rem;
+    background: var(--oscuro, #0077ff);
+    color: var(--blanco);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.comentario {
+    background: var(--oscuro);
+    padding: 1.2rem;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+    text-align: left;
+    color: var(--blanco);  
+}
+
+.acciones button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--blanco); 
+}
+
+.acciones button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.btn-like:hover,
+.btn-editar:hover,
+.btn-eliminar:hover {
+    opacity: 0.6;
+}
+
+.btn-mostrar {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    background: var(--oscuro, #0077ff);
+    color: var(--blanco);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+    .blog-card-comentarios {
+        padding: 1.5rem;
+    }
+
+    .comentario {
+        font-size: 0.95rem;
+    }
+
+    .acciones {
+        justify-content: center;
+        gap: 0.6rem;
+    }
+
+    .acciones button {
+        font-size: 0.85rem;
+    }
+
+    .btn-enviar,
+    .btn-mostrar {
+        width: 100%;
+    }
+}

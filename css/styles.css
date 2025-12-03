@@ -311,5 +311,151 @@ input[type="submit"]:hover{
     margin-top: 1rem;
 }
 
+@media (max-width: 768px) {
 
+    .logo-contenedor img {
+        width: 250px;
+    }
+    .titulo {
+        font-size: 4.5rem;
+    }
+    .versiculo {
+        font-size: 1.4rem;
+        max-width: 90%;
+    }
+    .navegacion-principal {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .navegacion-principal a {
+        padding: 1.5rem;
+        font-size: 1.6rem;
+    }
+    .hero {
+        height: 45rem;
+        background-size: cover;
+    }
+    .contenido-hero h2 {
+        font-size: 2.4rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+    .formulario {
+        padding: 2rem;
+    }
+    legend {
+        font-size: 1.8rem;
+    }
+    input, textarea {
+        font-size: 1.4rem;
+    }
+    .footer-social {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 0;
+    }
+    .social-btn {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo-contenedor img {
+        width: 180px;
+    }
+
+    .titulo {
+        font-size: 3.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .versiculo {
+        font-size: 1.2rem;
+        max-width: 95%;
+    }
+
+    .versiculo-ref {
+        font-size: 1.1rem;
+    }
+
+    .navegacion-principal a {
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+
+    .hero {
+        height: 35rem;
+        background-position: center;
+    }
+
+    .contenido-hero h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+    .formulario {
+        padding: 1.8rem;
+    }
+
+    input, textarea {
+        font-size: 1.3rem;
+    }
+
+    input[type="submit"] {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+    }
+
+    .social-btn img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .social-btn {
+        font-size: 1.3rem;
+    }
+
+    .footer-direccion p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .titulo {
+        font-size: 8rem;
+    }
+
+    .hero {
+        height: 80rem;
+    }
+
+    .contenido-hero h2 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 3.4rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+
+    .formulario {
+        max-width: 60rem;
+    }
+}
 
