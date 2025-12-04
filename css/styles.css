@@ -1,6 +1,4 @@
-/* =====================================
-   VARIABLES DE COLOR
-   ===================================== */
+/* ============== VARIABLES DE COLOR ==================== */
 :root{
     --blanco: #ffffff;
     --oscuro: #212121;
@@ -316,5 +314,61 @@ input[type="submit"]:hover{
     margin-top: 1rem;
 }
 
+/* ====================== RESPONSIVE ========================= */
 
+/* ----- MÓVILES PEQUEÑOS ----- */
+@media (max-width: 480px) {
+
+    .titulo {
+        font-size: 4rem;
+    }
+
+    .logo-contenedor img {
+        width: 200px;
+    }
+
+    .hero {
+        height: 45rem;
+        background-size: contain;
+    }
+
+    .contenido-hero h2 {
+        font-size: 2.2rem;
+        padding: 0 1rem;
+    }
+
+    .footer-social {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0;
+    }
+}
+
+/* ----- TABLETS ----- */
+@media (max-width: 768px) {
+
+    p {
+        text-align: left;
+    }
+
+    .footer-social {
+        padding: 0 2rem;
+    }
+
+    .hero {
+        height: 55rem;
+    }
+}
+
+/* ----- PANTALLAS GRANDES (MEJORAS OPCIONALES) ----- */
+@media (min-width: 1400px) {
+
+    .titulo {
+        font-size: 7rem;
+    }
+
+    .hero {
+        height: 80rem;
+    }
+}
 
