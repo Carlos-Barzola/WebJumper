@@ -1,26 +1,24 @@
-// Inicializar EmailJS
+// Inicializar EmailJS para envío de correos con info desde el formulario
 emailjs.init("uxYwkdPewBWhaJyUF");
 
 // Seleccionar formulario
 const form = document.querySelector(".formulario");
 
-// Función para mostrar errores
+// Función para mostrar errores debajo del input específico del error
 function mostrarError(input, mensaje) {
     input.classList.add("input-error");
 
-    // Si ya existe mensaje, no dupliques
     if (input.nextElementSibling && input.nextElementSibling.classList.contains("msg-error")) {
         input.nextElementSibling.textContent = mensaje;
         return;
     }
-
     const msg = document.createElement("p");
     msg.textContent = mensaje;
     msg.classList.add("msg-error");
     input.insertAdjacentElement("afterend", msg);
 }
 
-// Función limpiar errores
+// Función limpiar mensajes de error al corregir el campo
 function limpiarError(input) {
     input.classList.remove("input-error");
     if (input.nextElementSibling && input.nextElementSibling.classList.contains("msg-error")) {
@@ -32,13 +30,13 @@ function limpiarError(input) {
 form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const nombre = form.querySelector('input[type="text"]');
-    const telefono = form.querySelector('input[type="tel"]');
-    const mensaje = form.querySelector('textarea');
+    const nombre = form.querySelector('#nombre');
+    const telefono = form.querySelector('#telefono');
+    const mensaje = form.querySelector('#mensaje');
 
     let valido = true;
 
-    // ————————————— Validaciones —————————————
+    // ————————————— Validaciones de campos para mostrar error o no —————————————
     limpiarError(nombre);
     limpiarError(telefono);
     limpiarError(mensaje);
@@ -61,7 +59,7 @@ form.addEventListener("submit", function (e) {
 
     if (!valido) return;
 
-    // ————————————— Enviar por EmailJS —————————————
+    // ————————————— Envio correo por EmailJS —————————————
     const params = {
         nombre: nombre.value,
         telefono: telefono.value,

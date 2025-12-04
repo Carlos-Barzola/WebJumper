@@ -1,4 +1,4 @@
-/* ============== VARIABLES DE COLOR ==================== */
+/* ==========VARIABLES DE COLOR ============= */
 :root{
     --blanco: #ffffff;
     --oscuro: #212121;
@@ -9,14 +9,14 @@
 
 /* Ajustes globales */
 html{
-    font-size: 62.5%;
-    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px calculo facil de medidas*/
+    box-sizing: border-box; /* Para que el padding y border se incluyan en el ancho y alto total */
 }
 
 *,
 *:before,
 *:after{
-    box-sizing: inherit;
+    box-sizing: inherit;/* Hereda el box-sizing del html */
 }
 
 body{
@@ -35,9 +35,8 @@ body{
 }
 
 .logo-contenedor img {
-    width: 300px;   /* Puedes ajustar el tamaño */
+    width: 300px;   /* Se puede ajustar el tamaño del logo*/
     height: auto;
-    filter: drop-shadow(0 4px 10px #ffa40c(255, 147, 7, 0.45));
     transition: transform 0.3s ease;
     display: block;
 }
@@ -46,7 +45,7 @@ body{
 /* =====================================
    TITULO PRINCIPAL
    ===================================== */
-.titulo{
+.titulo{/*Estilos del título principal*/
     text-align: center;
     font-size: 6rem;
     color: var(--blanco);
@@ -67,15 +66,15 @@ body{
     text-align: center;            /* Centrado */
     max-width: 80%;                /* Que no se vea tan ancho */
     margin: 10px auto 0 auto;      /* Centra el párrafo */
-    line-height: 1.4;              /* Mejor lectura */
-    font-style:normal;            /* Estilo de cita */
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    line-height: 1.4;              /* Espacio entre líneas */
+    font-style:normal;            /* Estilo de cita como texto plano*/
+    transition: color 0.3s ease, text-shadow 0.3s ease; /*Transición suave para color y sombra */
 }
 
-.versiculo:hover {
-    color: var(--secundario);  /* Cambia a tu color secundario (naranja) */
-    text-shadow: 0px 0px 6px rgba(247, 141, 4, 0.918); /* Brillo suave */
-    transform: scale(1.2);
+.versiculo:hover {/* Efecto al pasar el mouse */
+    color: var(--secundario);  /* Cambia al color secundario (naranja) */
+    text-shadow: 0px 0px 6px rgba(247, 141, 4, 0.918); /* cre Brillo suave */
+    transform: scale(1.2);/* Aumenta ligeramente el tamaño */
 }
 
 .versiculo-ref {
@@ -121,7 +120,7 @@ body{
 }
 
 .navegacion-principal a:hover{
-    color: var(--oscuro);
+    color: var(--oscuro); /* Cambia al color oscuro al pasar el mouse */
 }
 
 /* =====================================
@@ -133,7 +132,7 @@ body{
     background-position: center center;
     background-size:cover;
     height: 70rem;
-    position: relative;
+    position: relative;/* Para posicionar contenido encima del hero*/
 }
 
 .contenido-hero{
@@ -157,9 +156,9 @@ body{
     text-align: center;
 }
 
-/* =====================================
-   SECCIONES PRINCIPALES
-   ===================================== */
+/* =====================================================
+   ESTILO EN SECCIONES PRINCIPALES (MISIÓN / VISIÓN
+   ===================================================== */
 .contenido-seccion{
     margin-top: 4rem;
 }
@@ -176,9 +175,9 @@ p{
 }
 
 /* =====================================
-   FORMULARIO DE CONTACTO
+   ESTILOS DEL FORMULARIO DE CONTACTO
    ===================================== */
-.form-contacto{
+.form-contacto{ 
     margin-top: 5rem;
     display: flex;
     justify-content: center;
@@ -192,10 +191,11 @@ p{
     border-radius: 1rem;
 }
 
-legend{
+legend{ /*Estilos de leyenda "Te contactamos"*/
     font-size: 2rem;
     color: var(--blanco);
     margin-bottom: 2rem;
+    font-weight: bold;
 }
 
 .campo{
@@ -204,12 +204,13 @@ legend{
     margin-bottom: 2rem;
 }
 
-label{
+label{ /*Estilos de etiquetas de los campos del formulario*/
     color: var(--blanco);
     margin-bottom: .5rem;
+    font-weight: bold;
 }
 
-input, textarea{
+input, textarea{ /*Estilos de los campos de entrada y área de texto*/
     width: 100%;
     padding: 1rem;
     border-radius: .5rem;
@@ -235,20 +236,20 @@ input[type="submit"]{
     padding: 1rem 3rem;
 }
 
-input[type="submit"]:hover{
+input[type="submit"]:hover{ /* Efecto hover para el botón de envío */
     background-color: var(--blanco);
 }
 
 /* =====================================
    FOOTER
    ===================================== */
-.footer{
+.footer{ /*Estilos contenedor del footer*/
     margin-top: 4rem;
     padding: 3rem 0;
     background-color: #111;
 }
 
-.footer-social{
+.footer-social{/*Estilos del contenedor de redes sociales*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -256,22 +257,22 @@ input[type="submit"]:hover{
     font-weight: bold;
 }
 
-.social-btn{
+.social-btn{ /*Estilos de letras que acompañan botones sociales*/
     display: flex;
     align-items: center;
     gap: .8rem;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1.6rem;
 }
 
-.social-btn img{
+.social-btn img{/*Estilos de íconos sociales*/
     width: 3rem;
     height: 3rem;
     transition: transform .3s ease;
 }
 
-.social-btn:hover img{
+.social-btn:hover img{ /* Efecto hover para íconos sociales */
     transform: scale(1.2);
 }
 
@@ -280,19 +281,19 @@ input[type="submit"]:hover{
     text-align: center;
 }
 
-.footer-direccion p{
+.footer-direccion p{ /*Estilos de texto de dirección en el footer*/
     color: var(--blanco);
     margin: .3rem 0;
     text-align: center;
 }
 
 /* ==== Animación de error en inputs ==== */
-.input-error {
+.input-error { /* Clase para inputs con error */
     border: 2px solid red !important;
     animation: shake .2s ease-in-out 0s 2;
 }
 
-@keyframes shake {
+@keyframes shake { /* Animación de sacudida cuando hay error o campos vacíos en el form */
     0% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
     50% { transform: translateX(5px); }
@@ -300,18 +301,11 @@ input[type="submit"]:hover{
     100% { transform: translateX(0); }
 }
 
-/* Mensajes debajo de inputs */
+/* Mensajes de error debajo de inputs */
 .msg-error {
     color: #ff4d4d;
     font-size: 1.3rem;
     margin-top: .5rem;
-}
-
-.msg-ok {
-    color: #4cd137;
-    font-size: 1.4rem;
-    text-align: center;
-    margin-top: 1rem;
 }
 
 /* ====================== RESPONSIVE ========================= */
@@ -360,7 +354,7 @@ input[type="submit"]:hover{
     }
 }
 
-/* ----- PANTALLAS GRANDES (MEJORAS OPCIONALES) ----- */
+/* ----- PANTALLAS GRANDES ----- */
 @media (min-width: 1400px) {
 
     .titulo {

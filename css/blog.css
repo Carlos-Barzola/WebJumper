@@ -60,25 +60,14 @@ body{
 .nav-blg{
   background-color: var(--accent);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  top: 0;
 }
 
 .nav-princblog{
   display: flex;
   flex-direction:column;
-}
-
-@media (min-width: 768px) {
-    .nav-princblog {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-@media (min-width: 480px) {
-    .nav-princblog {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  align-items: center;
 }
 
 .nav-princblog a{ /*Estilo de los enlaces de navegación principal*/
@@ -88,12 +77,24 @@ body{
   text-decoration: none;
   padding: 0.8rem;
   font-weight: bold;
+  width: 100%;
 }
 
 .nav-princblog a:hover{ /*Efecto hover de los enlaces de navegación principal*/
   color: var(--card)
 }
 
+@media (min-width: 768px) {
+  .nav-princblog{
+    flex-direction: row; /* Horizontal en pantallas medianas y grandes */
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+}
+  .nav-princblog a{
+    width: auto; /* Deja que los links tomen solo el ancho necesario */
+  }
 /* Contenedor principal del blog */
 .blog-main{ 
   display:grid; /*Convierte el contenedor en grid, para dividir en columnas.*/
