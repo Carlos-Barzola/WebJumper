@@ -1,11 +1,9 @@
-/* =====================================
-   VARIABLES DE COLOR
-   ===================================== */
+/* ============== VARIABLES DE COLOR ==================== */
 :root{
     --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #fcfcfc;
-    --secundario: rgb(255, 147, 7);
+    --secundario: #ffa40c;
     --gris: #757575; 
 }
 
@@ -23,7 +21,7 @@ html{
 
 body{
     font-size: 1.6rem;
-    font-family: "Krub", sans-serif;
+    font-family: "Poppins", sans-serif;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.93) 0%, var(--oscuro) 100%);
 }
 /* =============================================================== */
@@ -37,17 +35,21 @@ body{
 }
 
 .logo-contenedor img {
-    width: 400px;   /* Puedes ajustar el tamaño */
+    width: 300px;   /* Puedes ajustar el tamaño */
     height: auto;
+    filter: drop-shadow(0 4px 10px #ffa40c(255, 147, 7, 0.45));
+    transition: transform 0.3s ease;
     display: block;
 }
+
+
 /* =====================================
    TITULO PRINCIPAL
    ===================================== */
 .titulo{
     text-align: center;
-    font-size: 7rem;
-    color: var(--primario);
+    font-size: 6rem;
+    color: var(--blanco);
     margin-top: 0%;
     margin-bottom: 0.5%;
 }
@@ -72,7 +74,8 @@ body{
 
 .versiculo:hover {
     color: var(--secundario);  /* Cambia a tu color secundario (naranja) */
-    text-shadow: 0px 0px 6px rgba(255, 147, 7, 0.5); /* Brillo suave */
+    text-shadow: 0px 0px 6px rgba(247, 141, 4, 0.918); /* Brillo suave */
+    transform: scale(1.2);
 }
 
 .versiculo-ref {
@@ -311,151 +314,61 @@ input[type="submit"]:hover{
     margin-top: 1rem;
 }
 
-@media (max-width: 768px) {
+/* ====================== RESPONSIVE ========================= */
+
+/* ----- MÓVILES PEQUEÑOS ----- */
+@media (max-width: 480px) {
+
+    .titulo {
+        font-size: 4rem;
+    }
 
     .logo-contenedor img {
-        width: 250px;
+        width: 200px;
     }
-    .titulo {
-        font-size: 4.5rem;
-    }
-    .versiculo {
-        font-size: 1.4rem;
-        max-width: 90%;
-    }
-    .navegacion-principal {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    .navegacion-principal a {
-        padding: 1.5rem;
-        font-size: 1.6rem;
-    }
+
     .hero {
         height: 45rem;
-        background-size: cover;
+        background-size: contain;
     }
+
     .contenido-hero h2 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
+        padding: 0 1rem;
     }
-    h3 {
-        font-size: 2.5rem;
-    }
-    p {
-        font-size: 1.5rem;
-    }
-    .formulario {
-        padding: 2rem;
-    }
-    legend {
-        font-size: 1.8rem;
-    }
-    input, textarea {
-        font-size: 1.4rem;
-    }
+
     .footer-social {
         flex-direction: column;
-        text-align: center;
         gap: 1.5rem;
         padding: 0;
     }
-    .social-btn {
-        font-size: 1.4rem;
-    }
 }
 
-@media (max-width: 480px) {
+/* ----- TABLETS ----- */
+@media (max-width: 768px) {
 
-    .logo-contenedor img {
-        width: 180px;
+    p {
+        text-align: left;
     }
 
-    .titulo {
-        font-size: 3.2rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .versiculo {
-        font-size: 1.2rem;
-        max-width: 95%;
-    }
-
-    .versiculo-ref {
-        font-size: 1.1rem;
-    }
-
-    .navegacion-principal a {
-        padding: 1rem;
-        font-size: 1.4rem;
+    .footer-social {
+        padding: 0 2rem;
     }
 
     .hero {
-        height: 35rem;
-        background-position: center;
-    }
-
-    .contenido-hero h2 {
-        font-size: 2rem;
-    }
-
-    h3 {
-        font-size: 2.2rem;
-    }
-
-    p {
-        font-size: 1.4rem;
-    }
-    .formulario {
-        padding: 1.8rem;
-    }
-
-    input, textarea {
-        font-size: 1.3rem;
-    }
-
-    input[type="submit"] {
-        padding: 1rem 2rem;
-        font-size: 1.4rem;
-    }
-
-    .social-btn img {
-        width: 2.5rem;
-        height: 2.5rem;
-    }
-
-    .social-btn {
-        font-size: 1.3rem;
-    }
-
-    .footer-direccion p {
-        font-size: 1.2rem;
+        height: 55rem;
     }
 }
 
-@media (min-width: 1200px) {
+/* ----- PANTALLAS GRANDES (MEJORAS OPCIONALES) ----- */
+@media (min-width: 1400px) {
 
     .titulo {
-        font-size: 8rem;
+        font-size: 7rem;
     }
 
     .hero {
         height: 80rem;
-    }
-
-    .contenido-hero h2 {
-        font-size: 4rem;
-    }
-
-    h3 {
-        font-size: 3.4rem;
-    }
-
-    p {
-        font-size: 1.8rem;
-    }
-
-    .formulario {
-        max-width: 60rem;
     }
 }
 

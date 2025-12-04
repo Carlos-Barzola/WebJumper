@@ -1,153 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Jumper</title>
-        <link rel="stylesheet" href="css/galeria.css" />
-        <link rel="stylesheet" href="css/blog.css">
-        <link rel="stylesheet" href="css/styles.css">
-        <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog - Web Jumper</title>
+
+  <!-- Reusa fuentes y paleta -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/blog.css" />
 </head>
 <body>
-    <div class="nav-bg">
-      <nav class="navegacion-principal contenedor">
-        <a href="index.html">Inicio</a>
-        <a href="Galeriaimagenes.html">Galería</a>
-        <a href="Blogjumper.html">Blog</a>
-        <a href="jumpsocial.html">Social</a>
-      </nav>
+  
+<!-- Barra de navegación -->
+ <div class="nav-blg">
+    <nav class="nav-princblog contenedor">
+      <a href="index.html">Inicio</a>
+      <a href="Galeriaimagenes.html">Galería</a>
+      <a href="Blogjumper.html">Blog</a>
+      <a href="jumpsocial.html">Social</a>
+    </nav>
     </div>
 
-    <header class="encabezado-bloger">
-        <h1 class="titulo-galeria">Jumper Blog</h1>
-
-      <!-- Contenedor del logo debajo del título -->
-      <div class="logo-galeria">
-        <img src="Imagenes/Roary_Galeria.png" alt="Logo web Jumper" />
-      </div>
-        <div>
-            <!--Foto-->
-        </div>
-        <h2 class="titulo-bloger">El engaño de sentirte menos: viviendo con propósito en la soltería</h2>
-        <div class="nav-blog">
-            <nav class="navegacion-bloger">
-                <a href="" class="activo">autor</a>
-                <a href="">Grupo</a>
-                <a href="">Comentarios</a>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <article>
-            <section class="blog-card">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptate totam aut quia ipsa voluptatibus earum et, vel dolores, voluptas eum non! Blanditiis similique labore, porro asperiores sint nemo magnam.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatum impedit odio praesentium necessitatibus delectus tempore sequi, similique aperiam. Aspernatur repudiandae voluptatum iure voluptatibus. Voluptatibus laboriosam cupiditate cumque veniam eum!</p>
-            </section>
-        </article>
+  <!-- HEADER (mantén estilo similar al resto del sitio) -->
+  <header class="blog-header">
+    <div class="logo-contenedor-small">
+      <h1>Jumper - Blogs</h1>
+      <img src="imagenes/Roary_Blog.png" alt="Logo" />
+    </div>
+    <p class="lead">Temas y reflexiones para adolescentes cristianos.</p>
+  </header>
     
-    <section class="blog-card">
-        <h2>Ayudanos a llegar a otras</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolores hic quaerat itaque laudantium alias nihil voluptatum soluta unde ipsum sapiente consequatur ea quia rem, doloremque sequi consequuntur suscipit saepe?</p>
-    </section>
-    <section class="blog-card">
-        <h2>Sobre el autor</h2>
-        <!--Poner foto-->
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eius quam ratione modi, quis eos recusandae quod earum esse! Quisquam officiis deleniti itaque natus accusantium quibusdam necessitatibus dolores soluta voluptates.</p>
-        
-    </section>
-    <section class="blog-card">
-        <h2>Grupo</h2>
-        <!--Poner foto-->
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eius quam ratione modi, quis eos recusandae quod earum esse! Quisquam officiis deleniti itaque natus accusantium quibusdam necessitatibus dolores soluta voluptates.</p>
-        
-    </section>
-    <section class="blog-card-comentarios">
-         <h2>Comentarios</h2>
+  <main class="blog-main">
 
-    <!-- Caja para escribir -->
-    <div class="comentario-form">
-        <textarea placeholder="Escribe tu comentario..."></textarea>
-        <button class="btn-enviar">Enviar</button>
-    </div>
+    <!-- Zona pública: listado de posts -->
+    <section id="posts-container" class="posts-container">
+      <!-- Aquí se inyectan <article> de los posts -->
+    </section>
 
-    <!-- Lista de comentarios -->
-    <div class="comentario">
-        <p>Este es un comentario de ejemplo. Puedes reaccionar, editar o eliminar.</p>
+    <!-- SIDEBAR: login/registro + botón admin -->
+    
+    <aside class="sidebar">
 
-        <div class="acciones">
-            <button class="btn-like">3 Me gusta</button>
-            <button class="btn-editar">Editar</button>
-            <button class="btn-eliminar">Eliminar</button>
+      <!-- Registro / Login -->
+      <div class="card auth-card">
+        <h3>Registrarme</h3>
+
+        <div id="user-info" class="user-info">
+          <!-- Si hay usuario logueado se muestra aquí -->
         </div>
-    </div>
 
-    <div class="comentario">
-        <p>Otro comentario para demostrar el diseño.</p>
+        <div id="auth-forms" class="auth-forms">
+          <input type="text" id="reg-username" placeholder="Usuario (para comentar)" />
+          <input type="password" id="reg-password" placeholder="Contraseña" />
+          <button id="btn-register">Registrarme</button>
 
-        <div class="acciones">
-            <button class="btn-like">1 Me gusta</button>
-            <button class="btn-editar">Editar</button>
-            <button class="btn-eliminar">Eliminar</button>
+          <hr/>
+          <h3>Ya tengo cuenta</h3>
+          <input type="text" id="login-username" placeholder="Usuario" />
+          <input type="password" id="login-password" placeholder="Contraseña" />
+          <button id="btn-login">Iniciar sesión</button>
         </div>
-    </div>
 
-    <!-- Botón mostrar más -->
-    <button class="btn-mostrar">Mostrar más</button>
-    </section>
-    </main>
+        <div class="small-note">
+          <p>Debes iniciar sesión para comentar. Tus datos se guardan localmente en este navegador.</p>
+        </div>
+      </div>
 
-    <footer class="footer">
-      <div class="footer-social">
-        <!-- WhatsApp -->
-        <a
-          href="https://chat.whatsapp.com/ESUN8RbwaGWGCxMpLiizRX"
-          target="_blank"
-          class="social-btn"
-        >
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-            alt="WhatsApp"
-          />
-          <span>Comunidad WhatsApp</span>
-        </a>
-        <!-- Instagram -->
-        <a
-          href="https://www.instagram.com/jumper.ec?igsh=MTBocXJtMDJzdWd0OA=="
-          target="_blank"
-          class="social-btn"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
-            alt="Instagram"
-          />
-          <span>Instagram</span>
-        </a>
-        <!-- Facebook -->
-        <a
-          href="https://www.facebook.com/share/17VPagKwo7/"
-          target="_blank"
-          class="social-btn"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
-            alt="Facebook"
-          />
-          <span>Facebook</span>
-        </a>
+      <!-- ADMIN: crear post -->
+      <div class="card admin-card">
+        <h3>Área Administrador</h3>
+        <p class="muted">(Acceso con contraseña de administrador)</p>
+
+        <input type="password" id="admin-pass" placeholder="Clave admin" />
+        <button id="btn-admin-login">Entrar como admin</button>
+
+        <div id="admin-panel" class="admin-panel hidden">
+          <hr/>
+          <input type="text" id="post-title" placeholder="Título del post" />
+          <input type="text" id="post-banner-url" placeholder="URL de imagen (o deja vacío y pega local DataURL)" />
+          <textarea id="post-body" placeholder="Escribe el contenido..."></textarea>
+          <button id="btn-create-post">Publicar</button>
+          <button id="btn-logout-admin" class="danger">Salir admin</button>
+        </div>
       </div>
-      <!-- Dirección -->
-      <div class="footer-direccion">
-        <p></p>
-        <p></p>
-        <p></p>
-        <p>Av. Isidro Ayora y Jose Luis Tamayo Esq.</p>
-        <p>Iglesia Jesucristo es la Roca (JER)</p>
-        <p>Junto a Corp. Fernández.</p>
-      </div>
-    </footer>
+
+    </aside>
+
+  </main>
+
+  <!-- Plantilla modal simple para comentarios -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="js/blog.js"></script>
 </body>
 </html>
