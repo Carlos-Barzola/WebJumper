@@ -9,7 +9,7 @@
 /* ========================= GENERALES ========================= */
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif; /*Se configura la tipografía de la página*/
   background: #0d0d0d;
   color: white;
   margin: 0;
@@ -18,7 +18,7 @@ body {
 
 /* ========================= HEADER ========================== */
 
-/* Título principal */
+/* Título principal "Galería Jumper*/
 .titulo-galeria {
   text-align: center;
   padding: 30px 0;
@@ -27,29 +27,27 @@ body {
   margin-bottom: 3rem;
 }
 
-/* Contenedor del logo debajo del título */
+/*Contenedor del logo debajo del título: Define su posición*/
 .logo-galeria {
   text-align: center;
-  margin-top: -10px;
+  margin-top: 10px;
   margin-bottom: 70px;
 }
 
-/* Imagen del logo */
+/* Avatar leon: Define Tamaño, altura y el efecto de sombra naranja  */
 .logo-galeria img {
   width: 300px;
   height: auto;
-  filter: drop-shadow(0 4px 10px rgba(255, 147, 7, 0.918));
+  filter: drop-shadow(0 4px 10px rgba(255, 147, 7, 0.918)); /* Crea una sombra al contorno dle avatar*/
   transition: transform 0.3s ease;
 }
 
-/* Efecto al pasar mouse */
+/* Efecto al pasar mouse: El avatar se vuelve más grande*/
 .logo-galeria img:hover {
   transform: scale(2);
 }
 
-/* =====================================
-   NAVEGACIÓN PRINCIPAL
-   ===================================== */
+/* NAVEGACIÓN PRINCIPAL */
 .nav-bg{
     background-color: var(--secundario);
 }
@@ -59,13 +57,14 @@ body {
     flex-direction: column;
 }
 
+/*Vuelve responsive la barra de navegación*/
 @media (min-width: 768px){
     .navegacion-principal{
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: row; /*Coloca la barra de navegación como una fila*/
+        justify-content: space-between; /*Coloca espacio entre botones que dirigen a otras paginas*/
     }
 }
-
+/*Asigna estilos a los elementos dela barra de navegación*/
 .navegacion-principal a{
     display: block;
     text-align: center;
@@ -75,25 +74,26 @@ body {
     font-weight: bold;
 }
 
+/*Al pasar el mouse sobre elementos de la barra de navegación cambia el color*/
 .navegacion-principal a:hover{
     color: var(--oscuro);
 }
-/* ========================= SECCIONES DE GALERÍA ========================= */
 
+/* ========================= SECCIONES DE GALERÍA ========================= */
 .galeria-section {
-  width: 90%;
+  width: 90%; /*Ocupación de la pagina*/
   margin: 40px auto;
 }
-
+/*Títulos de cada sección*/
 .galeria-section h2 {
   font-size: 2.2rem;
   margin-bottom: 20px;
-  border-left: 5px solid #ffa40c;
+  border-left: 8px solid #ffa40c; /*Añade una barra al lado izuierdo del titulo*/
   padding-left: 10px;
 
   /* Un toque más premium */
-  letter-spacing: 1px;
-  font-weight: 600;
+  letter-spacing: 1px; /*Crea un espacio entre letras*/
+  font-weight: 600; /*Define el tamaño de la fuente*/
 }
 
 /* ========================= CARRUSELES ========================= */
@@ -103,48 +103,43 @@ body {
   overflow: hidden; /* SIN SCROLL visible */
   width: 100%;
   padding: 10px 0;
-
-  /* Se ve más elegante con espacio arriba/abajo */
-  margin-top: 10px;
+  margin-top: 10px; /* Crea un espacio arriba/abajo entre carruseles */
 }
 
 /* Wrapper interno */
 .carousel-wrapper {
   display: flex;
-  gap: 40px; /* <<< más respiración premium */
+  gap: 40px; /* <<< más respiración entre imagenes */
   width: max-content;
   transition: transform 0.8s ease-in-out;
 }
 
-/* Estilos de imagen */
+/* Esta sección define estilos del contenedor de cada foto en el carrusel */
 .carousel-wrapper img {
   width: 380px;
   height: 280px;
-  object-fit: cover;
+  object-fit:cover; /*Cover: hace que la imagen rellene todo el contenedor sin deformarse*/
   border-radius: 22px;
-
-  /* Sombras suaves premium */
+  /*Da sombras suaves al contenedor de la foto*/
   box-shadow:
     0 8px 20px rgba(255, 153, 0, 0.25),
     0 4px 10px rgba(0, 0, 0, 0.4);
 
   background: #131313; /* “Photo frame” look */
 
-  /* transición elegante */
+  /* transición elegante rodando imagenes a la izquierda*/
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* Hover más elegante */
+/*Efecto sobre el contenedor de las fotos, se agranda al pasar el mouse y aumenta la sombra*/
 .carousel-wrapper img:hover {
-  transform: scale(1.06);
+  transform: scale(1.06); /*aumento de la escala de la imagen*/
   box-shadow:
     0 12px 28px rgba(255, 166, 0, 0.35),
     0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* =====================================
-   FOOTER
-   ===================================== */
+/* FOOTER */
 .footer{
     margin-top: 4rem;
     padding: 3rem 0;

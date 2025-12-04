@@ -23,7 +23,7 @@ html{
 
 body{
     font-size: 1.6rem;
-    font-family: "Krub", sans-serif;
+    font-family: "Poppins", sans-serif;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.93) 0%, var(--oscuro) 100%);
 }
 /* =============================================================== */
@@ -50,8 +50,8 @@ body{
    ===================================== */
 .titulo{
     text-align: center;
-    font-size: 7rem;
-    color: var(--primario);
+    font-size: 6rem;
+    color: var(--blanco);
     margin-top: 0%;
     margin-bottom: 0.5%;
 }
