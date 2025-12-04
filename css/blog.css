@@ -43,9 +43,18 @@ body{
 }
 
 .blog-header .lead{ 
-    color:var(--muted); 
+  font-size: 30px;
+    color:var(--white); 
     margin:6px 0 16px;
+    font-weight: bold;
 }
+
+.lead:hover{
+    color: var(--accent);  /* Cambia a tu color secundario (naranja) */
+    text-shadow: 0px 0px 6px rgba(247, 141, 4, 0.918); /* Brillo suave */
+    transform: scale(1.2);    
+}
+
 
 /*NAVEGACIÓN PRINCIPAL*/
 .nav-blg{
@@ -81,9 +90,9 @@ body{
 .blog-main{
   display:grid;
   grid-template-columns: 1fr 320px;
-  gap:32px;
-  width:90%;
-  max-width:1200px;
+  gap:90px;
+  width:95%;
+  max-width:2000px;
   margin:36px auto;
   align-items:start;
 }
@@ -92,7 +101,7 @@ body{
 .posts-container{
   display:flex;
   flex-direction:column;
-  gap:28px;
+  gap:60px;
 }
 
 /* single post */
@@ -147,7 +156,7 @@ body{
   background:var(--card);
   padding:16px;
   border-radius:10px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 .auth-card input,
 .admin-card input,
@@ -192,4 +201,69 @@ button.danger{ background:#d33; color:#fff; }
   .blog-nav{ display:none; }
   .logo-contenedor-small img{ width:64px;}
   .post .banner{ height: 200px; }
+}
+
+/* ===============RESPONSIVE MEJORADO================= */
+
+/* Tablets */
+@media (max-width: 980px){
+  .blog-main{ 
+    grid-template-columns: 1fr; 
+    padding:0 18px; 
+  }
+
+  .post .banner{ 
+    height: 220px; 
+  }
+}
+
+/* Móviles medianos */
+@media (max-width: 768px){
+
+  /* Hace más pequeño el logo */
+  .logo-contenedor-small img{
+      width:180px;
+      margin-top:40px;
+      margin-bottom:50px;
+  }
+
+  .blog-header h1{
+    font-size:2.2rem;
+  }
+
+  .post .content{
+    padding:16px;
+  }
+
+  .post h2{
+    font-size:1.6rem;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px){
+
+  .logo-contenedor-small img{
+      width:150px;
+  }
+
+  .blog-header{
+      padding:16px 10px;
+  }
+
+  .blog-header h1{
+      font-size:1.9rem;
+  }
+
+  .post .banner{
+      height:160px;
+  }
+
+  button{
+      width:100%;
+  }
+
+  .card{
+      padding:12px;
+  }
 }
