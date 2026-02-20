@@ -2,7 +2,7 @@
 
 🚀 **Demo en vivo:** 
 👉 https://web-jumper.netlify.app/
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://tudominio.netlify.app)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)]([https://tudominio.netlify.app](https://web-jumper.netlify.app/))
 
 WebJumper es un proyecto web desarrollado con **HTML y CSS**, enfocado en la construcción de una interfaz estructurada y diseño visual responsive.
 
