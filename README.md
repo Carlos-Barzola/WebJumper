@@ -4,7 +4,7 @@
 👉 https://web-jumper.netlify.app/
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://web-jumper.netlify.app/)
 
-WebJumper es un proyecto web desarrollado con **HTML y CSS**, enfocado en la construcción de una interfaz estructurada y diseño visual responsive.
+WebJumper es un proyecto web desarrollado con **HTML, CSS y JS**, enfocado en la construcción de una interfaz estructurada y diseño visual responsive.
 
 El objetivo del proyecto es fortalecer habilidades en maquetación web, organización de contenido y aplicación de estilos modernos.
 
