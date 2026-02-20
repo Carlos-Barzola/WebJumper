@@ -34,22 +34,39 @@ En una próxima fase, se implementará un apartado tipo red social en el link de
 ## 📂 Estructura del proyecto
 
 webjumper/
+
 ├─ index.html
+
 ├─ pages/
+
 │  ├─ blog.html
+
 │  ├─ galeria.html
+
 │  └─ social.html
+
 ├─ assets/
+
 │  ├─ img/
+
 │  ├─ css/
+
 │  │  └─ blog.css
+
 │  │  └─ galeria.css
+
 │  │  └─ normalize.css
+
 │  │  └─ styles.css
+
 │  └─ js/
+
 │     └─ blog.js
+
 │     └─ galeria.js
+
 │     └─ validacion.js
+
 └─ README.md
 
 ---
