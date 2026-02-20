@@ -8,6 +8,8 @@ WebJumper es un proyecto web desarrollado con **HTML, CSS y JS**, enfocado en la
 
 El objetivo del proyecto es fortalecer habilidades en maquetación web, organización de contenido y aplicación de estilos modernos.
 
+En una próxima fase, se implementará un apartado tipo red social en el link de social. 
+
 ---
 
 ## 🚀 Tecnologías utilizadas
@@ -31,14 +33,24 @@ El objetivo del proyecto es fortalecer habilidades en maquetación web, organiza
 
 ## 📂 Estructura del proyecto
 
-WebJumper/
-│
-
-├── index.html
-
-├── styles.css
-
-└── assets/
+webjumper/
+├─ index.html
+├─ pages/
+│  ├─ blog.html
+│  ├─ galeria.html
+│  └─ social.html
+├─ assets/
+│  ├─ img/
+│  ├─ css/
+│  │  └─ blog.css
+│  │  └─ galeria.css
+│  │  └─ normalize.css
+│  │  └─ styles.css
+│  └─ js/
+│     └─ blog.js
+│     └─ galeria.js
+│     └─ validacion.js
+└─ README.md
 
 ---
 
